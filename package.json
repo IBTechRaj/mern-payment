@@ -1,0 +1,19 @@
+{
+    "name": "mern-payment-deploy",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "install-server": "cd backend && npm install",
+        "start-server": "cd backend && node index.js",
+        "install-client": "cd frontend && npm install",
+        "build-client": "cd frontend && npm run build",
+        "start-client": "cd frontend && npm run start"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.7.7"
+    }
+}
