@@ -13,6 +13,7 @@ app.use(cors({
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization']
 }))
+console.log('fe', process.env.FRONTEND_URL)
 
 app.use(express.json())
 app.use(cookieParser())
