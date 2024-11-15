@@ -6,6 +6,7 @@ const paymentController = async (request, response) => {
         console.log('cart items', cartItems)
         const user = await userModel.findOne({ _id: request.userId })
 
+        console.log('suc url', `${process.env.FRONTEND_URL}/success`)
         const params = {
             submit_type: 'pay',
             mode: 'payment',
