@@ -10,10 +10,9 @@ const app = express()
 app.use(cors({
     origin: process.env.FRONTEND_URL,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization']
 }))
-
-app.options('*', cors()); // Preflight handling for all routes
 
 app.use(express.json())
 app.use(cookieParser())
