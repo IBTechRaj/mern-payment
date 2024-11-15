@@ -42,7 +42,7 @@ const paymentController = async (request, response) => {
                 }
             }
             ),
-            success_url: `${process.env.FRONTEND_URL}/success`,
+            success_url: 'https://mern-payment-frontend.onrender.com/success',
             cancel_url: `${process.env.FRONTEND_URL}/cancel`,
         }
 
