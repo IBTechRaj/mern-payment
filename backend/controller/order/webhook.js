@@ -22,11 +22,7 @@ async function getLineItems(lineItems) {
 
             ProductItems.push(productData)
 
-            // const orderDetails = {
 
-            // }
-
-            // const order = new orderModel(orderDetails)
 
         }
     }
@@ -45,6 +41,7 @@ const webhooks = async (request, response) => {
 
     let event;
     try {
+        console.log('evt')
         event = stripe.webhooks.constructEvent(payloadString, header, endpointSecret);
         console.log('evvvt', event)
     } catch (err) {

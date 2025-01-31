@@ -6,7 +6,7 @@ const paymentController = async (request, response) => {
         console.log('cart items', cartItems)
         const user = await userModel.findOne({ _id: request.userId })
 
-        console.log('suc url', `${process.env.FRONTEND_URL}/success`)
+        // console.log('suc url', `${process.env.FRONTEND_URL}/success`)
         const params = {
             submit_type: 'pay',
             mode: 'payment',
@@ -49,7 +49,7 @@ const paymentController = async (request, response) => {
         const session = await stripe.checkout.sessions.create(params)
 
         response.status(303).json(session)
-        console.log('sess', session)
+        // console.log('sess', session)
     } catch (error) {
         response.json({
             message: error?.message || error,
